@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  frontend-service:
+    image: wiremock/wiremock
+    container_name: docker-wiremock
+    ports:
+      - "8085:8080"
+    volumes:
+      - ./docker:/home/wiremock
