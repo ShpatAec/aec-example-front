@@ -11,3 +11,9 @@ export type PostData = {
     title: string;
     body: string;
 };
+
+export interface routerType {
+    title: string;
+    path: string;
+    element: JSX.Element;
+}
