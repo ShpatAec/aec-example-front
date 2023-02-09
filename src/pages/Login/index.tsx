@@ -33,7 +33,7 @@ function Login() {
                         />
                     </div>
                     <a
-                        href="#"
+                        href="/#"
                         className="text-xs text-blue-600 hover:underline"
                     >
                         Forget Password?
@@ -49,7 +49,7 @@ function Login() {
                     {" "}
                     Don't have an account?{" "}
                     <a
-                        href="#"
+                        href="/#"
                         className="font-medium text-blue-800  hover:underline"
                     >
                         Sign up
