@@ -15,6 +15,7 @@ describe('api hooks utilities', () => {
         });
 
         it('should return initial value', () => {
+            // eslint-disable-next-line testing-library/render-result-naming-convention
             const hook = renderCustomHook();
             const [posts, fetchState, getPosts] = hook.result.current;
 
@@ -28,6 +29,7 @@ describe('api hooks utilities', () => {
                 .spyOn(axios, 'get')
                 .mockResolvedValue({ data: [] });
 
+            // eslint-disable-next-line testing-library/render-result-naming-convention
             const hook = renderCustomHook();
             const getPosts = hook.result.current[2];
 
@@ -44,6 +46,7 @@ describe('api hooks utilities', () => {
         it('should have expected states on api call', async () => {
             jest.spyOn(axios, 'get').mockResolvedValue({ data: [] });
 
+            // eslint-disable-next-line testing-library/render-result-naming-convention
             const hook = renderCustomHook();
             const getPosts = hook.result.current[2];
 
@@ -62,6 +65,7 @@ describe('api hooks utilities', () => {
         it('should have expected states on api error', async () => {
             jest.spyOn(axios, 'get').mockRejectedValue({});
 
+            // eslint-disable-next-line testing-library/render-result-naming-convention
             const hook = renderCustomHook();
             const getPosts = hook.result.current[2];
 
@@ -89,6 +93,7 @@ describe('api hooks utilities', () => {
 
             jest.spyOn(axios, 'get').mockResolvedValue(res);
 
+            // eslint-disable-next-line testing-library/render-result-naming-convention
             const hook = renderCustomHook();
             const getPosts = hook.result.current[2];
 
