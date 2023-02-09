@@ -2,7 +2,6 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import faker from 'faker';
 import { FetchState } from './types';
 import * as apiHooks from './lib/api-hooks';
-import App from './App';
 import Home from '../src/pages/Home'
 
 
