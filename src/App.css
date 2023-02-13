@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Montserrat Bold";
+  src: url("assets/fonts/Montserrat-Bold.ttf");
+}
+
 .container {
   width: 600px;
   max-width: 100%;
@@ -52,4 +57,17 @@
   border-radius: 8px;
   margin: 0 auto;
   min-width:30px;
+}
+
+.logo {
+  width: 10%;
+  height: auto;
+}
+
+.title-primary {
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+.bg-primary {
+  background-color: rgb(255,0,0);
 }
