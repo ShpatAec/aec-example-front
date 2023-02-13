@@ -4,9 +4,8 @@ import {Link} from 'react-router-dom';
 const Navbar = () => (
     <nav className="bg-primary p-2 flex justify-between items-center space-x-8 uppercase shadow-xl title-primary">
         <div className="flex items-center">
-            <Link to="/home"
-                  className="rounded-lg px-3 py-2 text-white hover:text-gray-800 font-medium mr-4 transition duration-500 ease-in-out">
-                <img alt="AEC-logo" src="../../assets/images/AEC_Logo.png" className="logo" />
+            <Link to="/home" className="px-3 py-2 text-white mr-4">
+                <img alt="AEC-logo" src="../../src/assets/images/AEC_Logo.png" className="logo"/>
             </Link>
             <Link to="/home"
                   className="rounded-lg px-3 py-2 text-white hover:text-gray-800 font-medium mr-4 transition duration-500 ease-in-out">
