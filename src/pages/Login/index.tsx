@@ -49,7 +49,7 @@ function Login() {
                     {" "}
                     Don't have an account?{" "}
                     <a
-                        href="/register"
+                        href="/#"
                         className="font-medium text-blue-800  hover:underline"
                     >
                         Sign up
