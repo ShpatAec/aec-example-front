@@ -14,7 +14,26 @@ function Navbar() {
                          className="sm:w-14 xs:w-14 lg:w-24 xl:w-24 2xl:w-28 inline"/>
                 </Link>
             </div>
-            <div>
+            <div
+                className="lg:flex xl:flex 2xl:flex lg:float-right xl:float-right 2xl:float-right lg:items-center xl:items-center 2xl:items-center md:hidden sm:hidden xs:hidden">
+                <Link to="/home"
+                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    Home
+                </Link>
+                <Link to="/about"
+                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    About
+                </Link>
+                <Link to="/"
+                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    Login
+                </Link>
+                <Link to="/register"
+                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    Register
+                </Link>
+            </div>
+            <div className="lg:hidden xl:hidden 2xl:hidden">
                 <div
                     className="lg:hidden xl:hidden 2xl:hidden xs:flex xs:items-center sm:flex sm:items-center xs:justify-between sm:justify-between">
                     <button
@@ -53,7 +72,7 @@ function Navbar() {
                     </button>
                 </div>
             </div>
-            <div>
+            <div className="lg:hidden xl:hidden 2xl:hidden">
                 <div
                     className={`flex-1 lg:hidden xl:hidden 2xl:hidden justify-self-center pb-3 mt-4 ${
                         navbar ? "block" : "hidden"
@@ -74,25 +93,6 @@ function Navbar() {
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div
-                className="lg:flex xl:flex 2xl:flex lg:float-right xl:float-right 2xl:float-right lg:items-center xl:items-center 2xl:items-center md:hidden sm:hidden xs:hidden">
-                <Link to="/home"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Home
-                </Link>
-                <Link to="/about"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    About
-                </Link>
-                <Link to="/"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Login
-                </Link>
-                <Link to="/register"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Register
-                </Link>
             </div>
         </nav>
     );
