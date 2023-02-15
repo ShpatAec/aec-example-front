@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: "Montserrat Regular";
-    src: url("assets/fonts/Montserrat-Regular.ttf");
+    src: url("../public/assets/fonts/Montserrat-Regular.ttf");
 }
 
 body {
