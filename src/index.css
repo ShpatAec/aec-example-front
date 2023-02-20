@@ -7,6 +7,10 @@
     src: url("../public/assets/fonts/Montserrat-Regular.ttf");
 }
 
+* {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat Regular', sans-serif;
