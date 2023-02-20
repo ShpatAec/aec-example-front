@@ -249,7 +249,7 @@ const HomeTabs = ({color}) => {
                                                     $1999
                                                 </td>
                                                 <td className="px-6 py-4">
-                                                    <a href="#"
+                                                    <a href="/#"
                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                                 </td>
                                             </tr>
@@ -276,7 +276,7 @@ const HomeTabs = ({color}) => {
                                                     $99
                                                 </td>
                                                 <td className="px-6 py-4">
-                                                    <a href="#"
+                                                    <a href="/#"
                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                                 </td>
                                             </tr>
@@ -303,7 +303,7 @@ const HomeTabs = ({color}) => {
                                                     $179
                                                 </td>
                                                 <td className="px-6 py-4">
-                                                    <a href="#"
+                                                    <a href="/#"
                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                                 </td>
                                             </tr>
@@ -330,7 +330,7 @@ const HomeTabs = ({color}) => {
                                                     $699
                                                 </td>
                                                 <td className="px-6 py-4">
-                                                    <a href="#"
+                                                    <a href="/#"
                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                                 </td>
                                             </tr>
