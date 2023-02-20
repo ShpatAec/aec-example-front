@@ -10,7 +10,7 @@ type Props = {}
 const Login: React.FC<Props> = () => {
     let navigate: NavigateFunction = useNavigate();
 
-    const [loading, setLoading] = useState<boolean>(false);
+    // const [loading, setLoading] = useState<boolean>(false);
     const [message, setMessage] = useState<string>("");
 
     const initialValues: {
@@ -30,7 +30,7 @@ const Login: React.FC<Props> = () => {
         const { username, password } = formValue;
 
         setMessage("");
-        setLoading(true);
+        // setLoading(true);
 
         login(username, password).then(
             () => {
@@ -44,7 +44,7 @@ const Login: React.FC<Props> = () => {
                     error.message ||
                     error.toString();
 
-                setLoading(false);
+                // setLoading(false);
                 setMessage(resMessage);
             }
         );

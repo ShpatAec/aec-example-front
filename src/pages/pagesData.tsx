@@ -3,7 +3,6 @@ import Profile from "./Profile";
 import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
-import AccountSettings from "./AccountSettings"
 import React from "react";
 
 // @ts-ignore
