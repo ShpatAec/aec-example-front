@@ -12,101 +12,42 @@ const HomeTabs = ({color}) => {
                         className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
                         role="tablist"
                     >
-                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
-                                className={
-                                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                    (openTab === 1
-                                        ? "text-blue-600 bg-" + color + "-600"
-                                        : "text-" + color + "-600 bg-white")
-                                }
-                                onClick={e => {
-                                    e.preventDefault();
-                                    setOpenTab(1);
-                                }}
-                                data-toggle="tab"
-                                href={"#link1"}
-                                role="tablist"
-                            >
-                                Main
-                            </a>
-                        </button>
-                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
-                                className={
-                                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                    (openTab === 2
-                                        ? "text-blue-600 bg-" + color + "-600"
-                                        : "text-" + color + "-600 bg-white")
-                                }
-                                onClick={e => {
-                                    e.preventDefault();
-                                    setOpenTab(2);
-                                }}
-                                data-toggle="tab"
-                                href={"#link2"}
-                                role="tablist"
-                            >
-                                Sales
-                            </a>
-                        </button>
-                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
-                                className={
-                                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                    (openTab === 3
-                                        ? "text-blue-600 bg-" + color + "-600"
-                                        : "text-" + color + "-600 bg-white")
-                                }
-                                onClick={e => {
-                                    e.preventDefault();
-                                    setOpenTab(3);
-                                }}
-                                data-toggle="tab"
-                                href={"#link3"}
-                                role="tablist"
-                            >
-                                Accounting
-                            </a>
-                        </button>
-                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
-                                className={
-                                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                    (openTab === 4
-                                        ? "text-blue-600 bg-" + color + "-600"
-                                        : "text-" + color + "-600 bg-white")
-                                }
-                                onClick={e => {
-                                    e.preventDefault();
-                                    setOpenTab(4);
-                                }}
-                                data-toggle="tab"
-                                href={"#link4"}
-                                role="tablist"
-                            >
-                                After sales
-                            </a>
-                        </button>
-                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-                            <a
-                                className={
-                                    "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                    (openTab === 5
-                                        ? "text-blue-600 bg-" + color + "-600"
-                                        : "text-" + color + "-600 bg-white")
-                                }
-                                onClick={e => {
-                                    e.preventDefault();
-                                    setOpenTab(5);
-                                }}
-                                data-toggle="tab"
-                                href={"#link5"}
-                                role="tablist"
-                            >
-                                Agency
-                            </a>
-                        </button>
+                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(1); }} role="tablist">    <div
+                            className={
+                                "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                (openTab === 1 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                            }
+                        >      Main
+                        </div></button>
+                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(2); }} role="tablist">    <div
+                            className={
+                                "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                (openTab === 2 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                            }
+                        >      Sales
+                        </div></button>
+                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(3); }} role="tablist">    <div
+                            className={
+                                "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                (openTab === 3 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                            }
+                        >      Accounting
+                        </div></button>
+                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(4); }} role="tablist">    <div
+                            className={
+                                "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                (openTab === 4 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                            }
+                        >        After sales
+                        </div></button>
+                        <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(5); }} role="tablist">    <div
+                            className={
+                                "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                                (openTab === 5 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                            }
+                        >       Agency
+                        </div></button>
+
                     </ul>
                     <div className=" relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                         <div className="px-4 py-5 flex-auto">
