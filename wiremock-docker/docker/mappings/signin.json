@@ -1,0 +1,29 @@
+{
+  "request": {
+    "method": "POST",
+    "urlPath": "/signin",
+    "headers": {
+      "Content-Type": {
+        "equalTo": "application/json"
+      }
+    },
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "username": "${json-unit.any-string}",
+          "password": "${json-unit.any-string}"
+        }
+      }
+    ]
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"id\": 1, \"username\": \"aecuser\", \"roles\": [], \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNAYWJjLmNvbSIsImF1dGgiOltdLCJleHAiOjE3MDc4NjczNTZ9.x6yLOaNRykUeLQ9GsuX5aZ2cW9bpqlSQAXkAIyI3zpmvyZ1v-WsUIWAh5K9aCpJ1uJEiGwI8kb2oo7tliUCT7w\", \"type\": \"Bearer\"}",
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+      "Access-Control-Max-Age": "3600"
+    }
+  }
+}
