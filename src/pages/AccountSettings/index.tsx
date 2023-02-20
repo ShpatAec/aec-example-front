@@ -12,7 +12,7 @@ export default function Tabs() {
     const [activeTab, setActiveTab] = useState(0);
     return (
 
-        <div className="p-6 flex flex-col md:flex-row">
+        <div className="container p-6 flex flex-col md:flex-row">
             <div className="flex flex-col md:w-4/12	">
                 {tabs.map((tab, index) => (
                     <button
