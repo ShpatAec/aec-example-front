@@ -3,8 +3,6 @@ import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
 import AccountSettings from "./AccountSettings";
-import PasswordSettings from "./PasswordSettings";
-import Profile from "./Profile";
 import React from "react";
 // @ts-ignore
 const pagesData: routerType[] = [
