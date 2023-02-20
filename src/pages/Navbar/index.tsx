@@ -20,7 +20,7 @@ function Navbar() {
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Home
                 </Link>
-                <Link to="/about"
+                <Link to="/profile"
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     About
                 </Link>
@@ -28,11 +28,11 @@ function Navbar() {
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Settings
                 </Link>
-                <Link to="/"
+                <Link to={"/"}
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Login
                 </Link>
-                <Link to="/register"
+                <Link to={"/register"}
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Register
                 </Link>

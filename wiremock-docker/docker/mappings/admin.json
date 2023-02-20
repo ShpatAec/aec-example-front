@@ -1,0 +1,14 @@
+{
+    "request": {
+      "urlPathPattern": "/admin",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName" : "get_admin_response.json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+}

@@ -1,11 +1,9 @@
 import { routerType } from "../types";
-import About from "./About";
+import Profile from "./Profile";
 import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
-import AccountSettings from "./AccountSettings";
-import PasswordSettings from "./PasswordSettings";
-import Profile from "./Profile";
+import AccountSettings from "./AccountSettings"
 import React from "react";
 
 // @ts-ignore
@@ -16,9 +14,9 @@ const pagesData: routerType[] = [
         title: "home"
     },
     {
-        path: "about",
-        element: <About />,
-        title: "about"
+        path: "profile",
+        element: <Profile />,
+        title: "profile"
     },
     {
         path: "/",
@@ -29,23 +27,7 @@ const pagesData: routerType[] = [
         path: "register",
         element: <Register/>,
         title: "register"
-    },
-    {
-        path: "accountSettings",
-        element: <AccountSettings/>,
-        title: "accountSettings"
-    },
-    {
-        path: "passwordSettings",
-        element: <PasswordSettings/>,
-        title: "passwordSettings"
-    },
-    {
-        path: "profile",
-        element: <Profile/>,
-        title: "profile"
     }
-
 ];
 
 export default pagesData;
