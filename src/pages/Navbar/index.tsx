@@ -25,6 +25,10 @@ const Navbar = () => (
                   className="rounded-lg px-3 py-2 text-black hover:text-red-800 font-medium mr-4 transition duration-500 ease-in-out">
                 Register
             </Link>
+            <Link to="/accountSettings"
+                  className="rounded-lg px-3 py-2 text-black hover:text-red-800 font-medium mr-4 transition duration-500 ease-in-out">
+                Settings
+            </Link>
         </div>
     </nav>
 );
