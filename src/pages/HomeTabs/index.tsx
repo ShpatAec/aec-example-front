@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import HomePageCards from "../HomePageCards";
 
 // @ts-ignore
@@ -25,7 +25,7 @@ const HomeTabs = ({color}) => {
                                     setOpenTab(1);
                                 }}
                                 data-toggle="tab"
-                                href="#link1"
+                                href={"#link1"}
                                 role="tablist"
                             >
                                 Main
@@ -44,7 +44,7 @@ const HomeTabs = ({color}) => {
                                     setOpenTab(2);
                                 }}
                                 data-toggle="tab"
-                                href="#link2"
+                                href={"#link2"}
                                 role="tablist"
                             >
                                 Sales
@@ -63,7 +63,7 @@ const HomeTabs = ({color}) => {
                                     setOpenTab(3);
                                 }}
                                 data-toggle="tab"
-                                href="#link3"
+                                href={"#link3"}
                                 role="tablist"
                             >
                                 Accounting
@@ -82,7 +82,7 @@ const HomeTabs = ({color}) => {
                                     setOpenTab(4);
                                 }}
                                 data-toggle="tab"
-                                href="#link4"
+                                href={"#link4"}
                                 role="tablist"
                             >
                                 After sales
@@ -101,7 +101,7 @@ const HomeTabs = ({color}) => {
                                     setOpenTab(5);
                                 }}
                                 data-toggle="tab"
-                                href="#link5"
+                                href={"#link5"}
                                 role="tablist"
                             >
                                 Agency

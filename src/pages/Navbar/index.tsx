@@ -20,10 +20,6 @@ function Navbar() {
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Home
                 </Link>
-                <Link to="/profile"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    About
-                </Link>
                 <Link to="/accountSettings"
                       className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                     Settings
@@ -55,9 +51,6 @@ function Navbar() {
                 <ul className="items-center justify-center space-y-4 my-2">
                     <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                         <a href="/home">Home</a>
-                    </li>
-                    <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                        <a href="/about">About</a>
                     </li>
                     <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                         <a href="/accountSettings">Settings</a>

@@ -14,11 +14,6 @@ const pagesData: routerType[] = [
         title: "home"
     },
     {
-        path: "profile",
-        element: <Profile/>,
-        title: "profile"
-    },
-    {
         path: "/",
         element: <Login/>,
         title: "login"
@@ -33,16 +28,6 @@ const pagesData: routerType[] = [
         element: <AccountSettings/>,
         title: "accountSettings"
     },
-    {
-        path: "passwordSettings",
-        element: <PasswordSettings/>,
-        title: "passwordSettings"
-    },
-    {
-        path: "profile",
-        element: <Profile/>,
-        title: "profile"
-    }
 ];
 
 export default pagesData;
