@@ -1,32 +1,31 @@
 import { routerType } from "../types";
-import Profile from "./Profile";
 import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
+import AccountSettings from "./AccountSettings";
 import React from "react";
-
 // @ts-ignore
 const pagesData: routerType[] = [
     {
         path: "Home",
-        element: <Home />,
+        element: <Home/>,
         title: "home"
     },
     {
-        path: "profile",
-        element: <Profile />,
-        title: "profile"
-    },
-    {
         path: "/",
-        element: <Login />,
+        element: <Login/>,
         title: "login"
     },
     {
         path: "register",
         element: <Register/>,
         title: "register"
-    }
+    },
+    {
+        path: "accountSettings",
+        element: <AccountSettings/>,
+        title: "accountSettings"
+    },
 ];
 
 export default pagesData;

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Profile = () => {
     return (
-        <div className="mt-6 relative flex flex-col justify-center  overflow-hidden">
-            <div className="w-full  bg-white rounded-md shadow-xl lg:max-w-xl">
+        <div className=" relative flex flex-col justify-center min-h-screen overflow-hidden ">
+            <div className="w-full card bg-white rounded-md shadow-xl lg:max-w-xl">
                 <h4 className="text-2xl mb-6  text-center text-blue-800  uppercase">
                     PROFILE SETTINGS </h4>
                 <div className="flex flex-col items-center pt-5 pb-5">
