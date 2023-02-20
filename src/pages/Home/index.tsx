@@ -6,9 +6,6 @@ import HomeStyle from './home.module.css';
 import HomeTabs from "../HomeTabs";
 
 function Home() {
-    const [posts, fetchState, getPosts] = useGetPosts();
-    const btnOnClick = () => getPosts();
-
     return (
         <div>
             <HomeTabs/>

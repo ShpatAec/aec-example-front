@@ -4,7 +4,6 @@ import HomePageCards from "../HomePageCards";
 // @ts-ignore
 const HomeTabs = ({color}) => {
     const [openTab, setOpenTab] = React.useState(1);
-    const [activeTab, setActiveTab] = useState(0);
     return (
         <>
             <div className="container flex flex-wrap">
