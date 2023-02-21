@@ -14,27 +14,28 @@ const Login: React.FC<Props> = () => {
     const [message, setMessage] = useState<string>("");
 
     const initialValues: {
-        username: string;
+        email: string;
         password: string;
     } = {
-        username: "",
+        email: "",
         password: "",
     };
 
     const validationSchema = Yup.object().shape({
-        username: Yup.string().required("This field is required!"),
+        email: Yup.string().required("This field is required!"),
         password: Yup.string().required("This field is required!"),
     });
 
-    const handleLogin = (formValue: { username: string; password: string }) => {
-        const { username, password } = formValue;
+    const handleLogin = (formValue: { email: string; password: string }) => {
+        const { email, password } = formValue;
 
         setMessage("");
         // setLoading(true);
 
-        login(username, password).then(
+        login(email, password).then(
             () => {
-                navigate("/home");
+                navigate("/profile")
+                window.location.reload();
             },
             (error) => {
                 const resMessage =
@@ -70,12 +71,12 @@ const Login: React.FC<Props> = () => {
                                     htmlFor={"email"}
                                     className="block text-sm font-semibold text-gray-800"
                                 >
-                                    Username
+                                    Email
                                 </label>
-                                <Field name="username" type="text"
+                                <Field name="email" type="text"
                                        className="block w-full px-4 py-2 mt-2 text-blue-800  bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"/>
                                 <ErrorMessage
-                                    name="username"
+                                    name="email"
                                     component="div"
                                     className="text-red-500 text-sm font-medium mt-1"
                                 />

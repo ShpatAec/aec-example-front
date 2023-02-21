@@ -10,7 +10,7 @@
     "bodyPatterns": [
       {
         "equalToJson": {
-          "username": "${json-unit.any-string}",
+          "email": "${json-unit.any-string}",
           "password": "${json-unit.any-string}"
         }
       }
@@ -18,7 +18,7 @@
   },
   "response": {
     "status": 200,
-    "body": "{\"id\": 1, \"username\": \"aecuser\", \"roles\": [], \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNAYWJjLmNvbSIsImF1dGgiOltdLCJleHAiOjE3MDc4NjczNTZ9.x6yLOaNRykUeLQ9GsuX5aZ2cW9bpqlSQAXkAIyI3zpmvyZ1v-WsUIWAh5K9aCpJ1uJEiGwI8kb2oo7tliUCT7w\", \"type\": \"Bearer\"}",
+    "body": "{\"id\": 2, \"email\": \"test@aec.com\", \"roles\": [\"USER\",\"ADMIN\"], \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmNAYWJjLmNvbSIsImF1dGgiOltdLCJleHAiOjE3MDc4NjczNTZ9.x6yLOaNRykUeLQ9GsuX5aZ2cW9bpqlSQAXkAIyI3zpmvyZ1v-WsUIWAh5K9aCpJ1uJEiGwI8kb2oo7tliUCT7w\", \"type\": \"Bearer\"}",
     "headers": {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",

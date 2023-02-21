@@ -1,11 +1,33 @@
-import React from 'react';
-import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React, {useEffect, useState} from "react";
+import { Link } from "react-router-dom";
+import * as AuthService from "../../services/auth.service";
+import IUser from "../../types/user.types";
 
-function Navbar() {
-
+const Navbar: React.FC = () => {
     const [navbar, setNavbar] = useState(false);
+    const [showModeratorBoard, setShowModeratorBoard] = useState<boolean>(false);
+    const [showAdminBoard, setShowAdminBoard] = useState<boolean>(false);
+    const [currentUser, setCurrentUser] = useState<IUser | undefined>(undefined);
+
+    useEffect(() => {
+        const user = AuthService.getCurrentUser();
+
+        if (user) {
+            setCurrentUser(user);
+            setShowModeratorBoard(user.roles.includes("MODERATOR"));
+            setShowAdminBoard(user.roles.includes("ADMIN"));
+        }
+    }, []);
+
+    const logOut = () => {
+        AuthService.logout();
+        setShowModeratorBoard(false);
+        setShowAdminBoard(false);
+        setCurrentUser(undefined);
+    };
+
     return (
+
         <nav
             className="bg-white sticky top-0 p-2 flex justify-between uppercase shadow-xl title-primary w-full grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 xs:grid-cols-2">
             <div className="sm:hidden xs:hidden lg:flex xl:flex 2xl:flex float-left items-center lg:col-start-1 lg:col-end-2 xl:col-start-1 xl:col-end-2">
@@ -16,22 +38,51 @@ function Navbar() {
             </div>
             <div
                 className="lg:col-start-2 lg:col-end-3 xl:col-start-3 xl:col-end-4 2xl:col-start-3 2xl:col-end-4 lg:flex xl:flex 2xl:flex float-right items-center md:hidden sm:hidden xs:hidden">
-                <Link to="/home"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Home
-                </Link>
-                <Link to="/accountSettings"
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Settings
-                </Link>
-                <Link to={"/"}
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Login
-                </Link>
-                <Link to={"/register"}
-                      className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                    Register
-                </Link>
+                {showModeratorBoard && (
+                        <Link to={"/mod"} className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                            Moderator Board
+                        </Link>
+                )}
+
+                {showAdminBoard && (
+                        <Link to={"/admin"} className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                            Admin
+                        </Link>
+                )}
+
+                {currentUser && (
+                        <Link to={"/user"} className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                            User
+                        </Link>
+                )}
+
+
+            {currentUser ? (
+                <div className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    <Link to="/home"
+                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                        Home
+                    </Link>
+                    <a href="/" className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out" onClick={logOut}>
+                        LogOut
+                    </a>
+                    <Link to={"/accountSettings"} >
+                            {currentUser.email}
+                        </Link>
+
+                </div>
+            ) : (
+                <div className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                        <Link to={"/"} className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                            Login
+                        </Link>
+
+                        <Link to={"/register"} className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                            Sign Up
+                        </Link>
+                </div>
+            )}
+
             </div>
             {!navbar && (
                 <div
@@ -100,8 +151,9 @@ function Navbar() {
                     )}
                 </button>
             </div>
+
         </nav>
     );
-}
+};
 
 export default Navbar;

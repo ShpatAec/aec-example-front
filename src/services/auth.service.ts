@@ -13,14 +13,14 @@ export const register = (username: string, email: string, password: string) => {
   
 };
 
-export const login = (username: string, password: string) => {
+export const login = (email: string, password: string) => {
   return axios
     .post(API_URL + "signin", {
-      username,
+      email,
       password,
     })
     .then((response) => {
-      if (response.data.accessToken) {
+      if (response.data.token) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
 

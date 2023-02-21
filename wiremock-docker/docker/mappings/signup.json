@@ -18,7 +18,11 @@
       "Access-Control-Allow-Origin":"*",
       "Access-Control-Allow-Methods":"GET, POST, PUT, DELETE, OPTIONS",
       "Access-Control-Allow-Headers":"*",
-      "Access-Control-Max-Age":"3600"
-    }
+      "Access-Control-Max-Age":"3600",
+      "Content-Type":"application/json"
+    },
+    "body": "{\"message\": \"User registered successfully\"}"
   }
 }
+
+

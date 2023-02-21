@@ -91,7 +91,8 @@ const Register: React.FC = () => {
                                     name="username"
                                     component="div"
                                     className="text-red-500 text-sm mt-1" />
-                            </div><div className="mb-4">
+                                </div>
+                                <div className="mb-4">
                                 <label htmlFor="email"
                                        className="block text-sm font-semibold text-gray-800"
                                 >
@@ -126,15 +127,15 @@ const Register: React.FC = () => {
                                 </button>
                             </div></>
                         )}
-
                         {message && (
-                            <div className="form-group">
+                            <div className="form-group flex justify-center">
                                 <div
                                     className={
-                                        successful ? "text-green-500" : "text-red-500"
+                                        successful ?  "text-green-500" : "text-red-500"
                                     }
                                     role="alert"
                                 >
+
                                     {message}
                                 </div>
                             </div>

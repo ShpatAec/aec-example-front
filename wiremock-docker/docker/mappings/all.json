@@ -1,15 +1,17 @@
 {
-    "request": {
-      "urlPathPattern": "/all",
-      "method": "GET"
-    },
-    "response": {
-      
-      "status": 200,
-      "bodyFileName" : "get_all_response.json",
-      "headers": {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      }
+  "request": {
+    "method": "GET",
+    "urlPath": "/all"
+  },
+  "response": {
+    "status": 200,
+    "body": "This is a public content.",
+    "headers": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+      "Access-Control-Max-Age": "3600"
     }
+  }
 }
