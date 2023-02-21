@@ -1,17 +1,17 @@
 {
-    "request": {
-      "urlPathPattern": "/admin",
-      "method": "GET"
-    },
-    "response": {
-      "status": 200,
-      "bodyFileName" : "get_admin_response.json",
-      "headers": {
-        "Content-Type": "text/plain",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
-        "Access-Control-Max-Age": "3600"
-      }
+  "request": {
+    "method": "GET",
+    "urlPath": "/admin"
+  },
+  "response": {
+    "status": 200,
+    "body": "This is Admin Board.",
+    "headers": {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+      "Access-Control-Max-Age": "3600"
     }
+  }
 }
