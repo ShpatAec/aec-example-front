@@ -31,7 +31,7 @@ const BoardAdmin: React.FC = () => {
     return (
         <div className="container">
             <header className="jumbotron">
-                <h1>Shpat</h1>
+                <h1>{content}</h1>
             </header>
         </div>
     );

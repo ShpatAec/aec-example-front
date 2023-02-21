@@ -2,7 +2,6 @@ import { routerType } from "../types";
 import Home from "./Home";
 import Login from "./Login";
 import Register from "./Register";
-import Profile from "./Profile";
 import BoardAdmin from "./BoardAdmin";
 import BoardUser from "./BoardUser";
 import BoardModerator from "./BoardModerator";
