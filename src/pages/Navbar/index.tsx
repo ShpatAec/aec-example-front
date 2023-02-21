@@ -60,23 +60,21 @@ const Navbar: React.FC = () => {
                 )}
 
                 {currentUser ? (
-                    <div
-                        className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                    <>
                         <Link to="/home"
                               className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                             Home
                         </Link>
-                        <a href="/"
-                           className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
-                           onClick={logOut}>
-                            Logout
-                        </a>
                         <Link to={"/accountSettings"}
                               className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                             {currentUser.email}
                         </Link>
-
-                    </div>
+                        <Link to={"/"}
+                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
+                              onClick={logOut}>
+                            Logout
+                        </Link>
+                    </>
                 ) : (
                     <div
                         className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
@@ -136,10 +134,10 @@ const Navbar: React.FC = () => {
                                 <a href="/home">Home</a>
                             </li>
                             <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                                <a href="/" onClick={logOut}>Logout</a>
+                                <a href="/accountSettings">{currentUser.email}</a>
                             </li>
                             <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                                <a href="/accountSettings">{currentUser.email}</a>
+                                <a href="/" onClick={logOut}>Logout</a>
                             </li>
                         </>
                     ) : (
