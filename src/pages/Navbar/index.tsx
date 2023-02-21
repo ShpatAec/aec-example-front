@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
                 </Link>
             </div>
             <div
-                className="lg:col-start-2 lg:col-end-3 xl:col-start-2 xl:col-end-3 2xl:col-start-2 2xl:col-end-3 lg:flex xl:flex 2xl:flex float-right items-center md:hidden sm:hidden xs:hidden">
+                className="lg:col-start-3 lg:col-end-3 xl:col-start-3 xl:col-end-3 2xl:col-start-3 2xl:col-end-3 lg:flex xl:flex 2xl:flex float-right items-center md:hidden sm:hidden xs:hidden">
                 {showModeratorBoard && (
                     <Link to={"/mod"}
                           className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
@@ -152,7 +152,7 @@ const Navbar: React.FC = () => {
                 </ul>
             </div>
             <div
-                className="lg:hidden xl:hidden 2xl:hidden items-center sm:ml-16 xs:ml-16 md:ml-48 sm:col-start-2 sm:col-end-3 xs:col-start-2 xs:col-end-3 md:col-start-2 md:col-end-3">
+                className="lg:hidden xl:hidden 2xl:hidden items-center sm:ml-16 xs:ml-16 md:ml-48 sm:col-start-3 sm:col-end-3 xs:col-start-3 xs:col-end-3 md:col-start-3 md:col-end-3">
                 <button
                     className="p-3 text-gray-800 rounded-md outline-none focus:border-gray-400 focus:border"
                     onClick={() => setNavbar(!navbar)}
