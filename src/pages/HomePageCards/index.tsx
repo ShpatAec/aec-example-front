@@ -13,7 +13,6 @@ function HomePageCards() {
         const headers = {foo: "bar"}
         axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`, {headers})
             .then(response => {
-                console.log("deleted successfully!", id)
                 const newPostsList = posts.filter((post) => post.id !== id);
                 setPosts(newPostsList);
             })
@@ -73,7 +72,7 @@ function HomePageCards() {
                                     </a>
                                     <button
                                         onClick={() => deleteHandler(post.id)}
-                                        className="ml-3 d flex text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Delete
+                                        className="ml-3 items-center flex text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">Delete
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                              strokeWidth={1.5} stroke="currentColor" className="ml-1 w-4 h-4">
                                             <path strokeLinecap="round" strokeLinejoin="round"
