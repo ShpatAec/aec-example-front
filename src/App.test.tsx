@@ -31,7 +31,7 @@ describe('<Home />', () => {
 
         jest
             .spyOn(apiHooks, 'useGetPosts')
-            .mockReturnValue([[], fetchState, jest.fn()]);
+            .mockReturnValue([[], fetchState, jest.fn(),jest.fn()]);
 
         renderComponent();
 
@@ -46,7 +46,7 @@ describe('<Home />', () => {
 
         jest
             .spyOn(apiHooks, 'useGetPosts')
-            .mockReturnValue([[], fetchState, jest.fn()]);
+            .mockReturnValue([[], fetchState, jest.fn(),jest.fn()]);
 
         renderComponent();
 
@@ -69,7 +69,7 @@ describe('<Home />', () => {
 
         jest
             .spyOn(apiHooks, 'useGetPosts')
-            .mockReturnValue([posts, fetchState, jest.fn()]);
+            .mockReturnValue([posts, fetchState, jest.fn(),jest.fn()]);
 
         renderComponent();
 
@@ -86,10 +86,11 @@ describe('<Home />', () => {
 
     it('should call API on button click', () => {
         const getPostsMock = jest.fn();
+        const setPostsMock = jest.fn();
 
         jest
             .spyOn(apiHooks, 'useGetPosts')
-            .mockReturnValue([[], FetchState.DEFAULT, getPostsMock]);
+            .mockReturnValue([[], FetchState.DEFAULT, getPostsMock, setPostsMock]);
 
         renderComponent();
 
