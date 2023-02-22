@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import * as AuthService from "../../services/auth.service";
 import IUser from "../../types/user.types";
+import { logout } from "../../services/auth.service";
 
 const Navbar: React.FC = () => {
     const [navbar, setNavbar] = useState(false);
@@ -19,11 +20,9 @@ const Navbar: React.FC = () => {
         }
     }, []);
 
-    const logOut = () => {
-        AuthService.logout();
-        setShowModeratorBoard(false);
-        setShowAdminBoard(false);
-        setCurrentUser(undefined);
+    const handleLogout = () => {
+            logout();
+            window.location.href = '/'; // Redirect the user to the homepage
     };
 
     return (
@@ -69,9 +68,10 @@ const Navbar: React.FC = () => {
                               className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                             {currentUser.email}
                         </Link>
+
                         <Link to={"/"}
                               className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
-                              onClick={logOut}>
+                              onClick={handleLogout}>
                             Logout
                         </Link>
                     </>
@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
                                 <a href="/accountSettings">{currentUser.email}</a>
                             </li>
                             <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                                <a href="/" onClick={logOut}>Logout</a>
+                                <a href="/" onClick={handleLogout}>Logout</a>
                             </li>
                         </>
                     ) : (

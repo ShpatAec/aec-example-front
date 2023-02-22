@@ -10,13 +10,13 @@ const Register: React.FC = () => {
     const [message, setMessage] = useState<string>("");
 
     const initialValues: IUser = {
-        username: "",
+        name: "",
         email: "",
         password: "",
     };
 
     const validationSchema = Yup.object().shape({
-        username: Yup.string()
+        name: Yup.string()
             .test(
                 "len",
                 "The username must be between 3 and 20 characters.",
@@ -42,12 +42,17 @@ const Register: React.FC = () => {
     });
 
     const handleRegister = (formValue: IUser) => {
-        const { username, email, password } = formValue;
+        const { name, email, password } = formValue;
 
-        register(username, email, password).then(
+        register(name, email, password).then(
             (response) => {
-                setMessage(response.data.message);
-                setSuccessful(true);
+                if (response.status === 201) {
+                    setMessage("Registration successful!");
+                    setSuccessful(true);
+                } else {
+                    setMessage("An error occurred during registration. Please try again later.");
+                    setSuccessful(false);
+                }
             },
             (error) => {
                 const resMessage =
@@ -62,6 +67,7 @@ const Register: React.FC = () => {
             }
         );
     };
+
 
     return (
         <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
@@ -78,17 +84,17 @@ const Register: React.FC = () => {
                         {!successful && (
                             <><div className="mb-2">
                                 <label
-                                    htmlFor={"username"}
+                                    htmlFor={"name"}
                                     className="block text-sm font-semibold text-gray-800"
                                 >
-                                    Username
+                                    Name
                                 </label>
                                 <Field
-                                    name="username"
+                                    name="name"
                                     type="text"
                                     className="block w-full px-4 py-2 mt-2 text-blue-800  bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
                                 <ErrorMessage
-                                    name="username"
+                                    name="name"
                                     component="div"
                                     className="text-red-500 text-sm mt-1" />
                                 </div>
