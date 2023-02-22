@@ -19,5 +19,5 @@ export function useGetPosts() {
         }
     };
 
-    return [posts, fetchState, getPosts] as const;
+    return [posts, fetchState, getPosts,setPosts] as const;
 }
