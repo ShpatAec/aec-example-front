@@ -2,7 +2,7 @@ import React from "react";
 import HomePageCards from "../HomePageCards";
 
 // @ts-ignore
-const HomeTabs = ({color}) => {
+const HomeTabs = () => {
     const [openTab, setOpenTab] = React.useState(1);
     return (
         <>
@@ -15,35 +15,35 @@ const HomeTabs = ({color}) => {
                         <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(1); }} role="tablist">    <div
                             className={
                                 "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                (openTab === 1 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                                (openTab === 1 ? "text-blue-600 bg-blue-100" : "text-blue bg-white-600")
                             }
                         >      Main
                         </div></button>
                         <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(2); }} role="tablist">    <div
                             className={
                                 "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                (openTab === 2 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                                (openTab === 2 ? "text-blue-600 bg-blue-100" : "text-blue bg-white-600")
                             }
                         >      Sales
                         </div></button>
                         <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(3); }} role="tablist">    <div
                             className={
                                 "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                (openTab === 3 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                                (openTab === 3 ? "text-blue-600 bg-blue-100" : "text-blue bg-white-600")
                             }
                         >      Accounting
                         </div></button>
                         <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(4); }} role="tablist">    <div
                             className={
                                 "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                (openTab === 4 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                                (openTab === 4 ?"text-blue-600 bg-blue-100" : "text-blue bg-white-600")
                             }
                         >        After sales
                         </div></button>
                         <button className="-mb-px mr-2 last:mr-0 flex-auto text-center" onClick={e => { setOpenTab(5); }} role="tablist">    <div
                             className={
                                 "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                                (openTab === 5 ? "text-blue-600 bg-" + color + "-600" : "text-" + color + "-600 bg-white")
+                                (openTab === 5 ? "text-blue-600 bg-blue-100" : "text-blue bg-white-600")
                             }
                         >       Agency
                         </div></button>
@@ -401,7 +401,7 @@ const HomeTabs = ({color}) => {
 export default function TabsRender() {
     return (
         <>
-            <HomeTabs color="pink"/>;
+            <HomeTabs/>;
         </>
     );
 }
