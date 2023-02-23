@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
                                 <a href="/home">Home</a>
                             </li>
                             <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                                <a href="/accountSettings">{currentUser.email}</a>
+                                <a href="/accountSettings">Account</a>
                             </li>
                             <li className="rounded-lg py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
                                 <a href="/" onClick={handleLogout}>Logout</a>
