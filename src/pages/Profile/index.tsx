@@ -6,7 +6,7 @@ const Profile: React.FC = () => {
     console.log("currentUser:", currentUser);
 
     return (
-            <div className=" relative flex flex-col justify-top min-h-screen overflow-hidden ">
+            <div className="relative flex flex-col justify-center  overflow-hidden ">
                 <div className="w-full card bg-white rounded-md shadow-xl lg:max-w-xl">
                     <h4 className="text-2xl mb-6  text-center text-blue-800  uppercase">
                         PROFILE SETTINGS </h4>
