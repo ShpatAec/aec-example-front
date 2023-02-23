@@ -17,7 +17,6 @@ function HomePageCards() {
         headers,
       })
       .then(() => {
-        console.log("deleted successfully!", postIdToDelete);
         const newPostsList = posts.filter((post) => post.id !== postIdToDelete);
         setPosts(newPostsList);
       })
