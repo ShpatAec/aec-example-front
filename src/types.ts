@@ -1,19 +1,19 @@
 export enum FetchState {
-    DEFAULT = 'DEFAULT',
-    LOADING = 'LOADING',
-    SUCCESS = 'SUCCESS',
-    ERROR = 'ERROR',
+  DEFAULT = "DEFAULT",
+  LOADING = "LOADING",
+  SUCCESS = "SUCCESS",
+  ERROR = "ERROR",
 }
 
 export type PostData = {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 };
 
 export interface routerType {
-    title: string;
-    path: string;
-    element: JSX.Element;
+  title: string;
+  path: string;
+  element: JSX.Element;
 }
