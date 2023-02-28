@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
                 {showAdminBoard && (
                     <Link to={"/admin"}
                           className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                        Admin
+                        Admin Board
                     </Link>
                 )}
 
