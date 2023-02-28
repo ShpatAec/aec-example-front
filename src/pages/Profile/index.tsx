@@ -9,7 +9,7 @@ const Profile: React.FC = () => {
     <div className="relative flex flex-col justify-center  overflow-hidden ">
       <div className="w-full card bg-white rounded-md shadow-xl lg:max-w-xl">
         <h4 className="text-2xl mb-6  text-center text-blue-800  uppercase">
-          PROFILE SETTINGS
+          PROFILE SETTINGS{" "}
         </h4>
         <div className="flex flex-col items-center pt-5 pb-5">
           <svg
@@ -19,26 +19,58 @@ const Profile: React.FC = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fillRule="evenodd"
+              fill-rule="evenodd"
               d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-              clipRule="evenodd"
+              clip-rule="evenodd"
             ></path>
           </svg>
-          <form>
-            <div className="flex flex-col items-center pt-5 pb-5 text-center">
-              <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-black">
-                {currentUser.email}
-              </h5>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                <ul>
-                  {currentUser.roles &&
-                    currentUser.roles.map((role: string, index: number) => (
-                      <li key={index} className="list-disc ml-4">
-                        {role}
-                      </li>
-                    ))}
-                </ul>
-              </span>
+          <form className="w-full">
+            <div className="flex">
+              <div className="w-1/4 flex flex-col justify-between ml-8">
+                <label
+                  htmlFor={"email"}
+                  className="block text-base mt-3 font-semibold text-gray-500"
+                >
+                  Email:
+                </label>
+                <label
+                  htmlFor={"role"}
+                  className="block text-base mt-3 font-semibold text-gray-500"
+                >
+                  Role:
+                </label>
+                <label
+                  htmlFor={"token"}
+                  className="block text-base font-semibold mt-3 text-gray-500"
+                >
+                  Token:
+                </label>
+                <label
+                  htmlFor={"id"}
+                  className="block text-base font-semibold mt-3 text-gray-500"
+                >
+                  ID:
+                </label>
+              </div>
+              <div className="w-3/4 self-end  text-blue-800 flex flex-col justify-between">
+                <p className="mt-3">{currentUser.email}</p>
+                <p className="mt-3">
+                  <ul>
+                    {currentUser.roles &&
+                      currentUser.roles.map((role: string, index: number) => (
+                        <li key={index} className="list-disc">
+                          {role}
+                        </li>
+                      ))}
+                  </ul>
+                </p>
+                <p className="mt-3">
+                  {" "}
+                  {currentUser.token.substring(0, 20)} ...{" "}
+                  {currentUser.token.substr(currentUser.token.length - 20)}
+                </p>
+                <p className="mt-3"> {currentUser.id}</p>
+              </div>
             </div>
             <div className="mt-10 flex justify-end">
               <button className="mr-3 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
