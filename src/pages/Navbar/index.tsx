@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState<boolean>(false);
   const [showAdminBoard, setShowAdminBoard] = useState<boolean>(false);
   const [currentUser, setCurrentUser] = useState<IUser | undefined>(undefined);
-  const [item, setItem] = React.useState("");
+  const [item, setItem] = React.useState("settings");
 
   useEffect(() => {
     const user = AuthService.getCurrentUser();
@@ -38,8 +38,8 @@ const Navbar: React.FC = () => {
     setCurrentUser(undefined);
   };
 
-  const handleChange = (event: any) => {
-    setItem(event.target.value);
+  const handleChange = () => {
+    setItem("settings");
   };
 
   return (
@@ -84,7 +84,6 @@ const Navbar: React.FC = () => {
         {currentUser ? (
           <FormControl sx={{ m: 1, minWidth: 120 }}>
             <Select
-              disableUnderline
               displayEmpty
               value={item}
               onChange={handleChange}
@@ -112,7 +111,12 @@ const Navbar: React.FC = () => {
               }}
               IconComponent={() => <KeyboardArrowDown />}
             >
-              <MenuItem value="" className="title-primary">
+              <MenuItem value="settings" sx={{ display: "none" }}>
+                <span className="title-primary uppercase rounded-lg text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                  Settings
+                </span>
+              </MenuItem>
+              <MenuItem value="user">
                 <Link
                   to={"/user"}
                   className="title-primary uppercase rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
@@ -131,7 +135,7 @@ const Navbar: React.FC = () => {
               <ListSubheader>
                 <hr style={{ border: "1px solid gray" }} />
               </ListSubheader>
-              <MenuItem value={20}>
+              <MenuItem value={"logout"}>
                 <Link
                   to={"/"}
                   className="title-primary uppercase rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
