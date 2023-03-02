@@ -23,8 +23,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 1
-                    ? "text-blue-600 bg-blue-100"
-                    : "text-blue bg-white-600")
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-800 bg-white")
                 }
               >
                 Main
@@ -41,8 +41,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 2
-                    ? "text-blue-600 bg-blue-100"
-                    : "text-blue bg-white-600")
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-800 bg-white")
                 }
               >
                 Sales
@@ -59,8 +59,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 3
-                    ? "text-blue-600 bg-blue-100"
-                    : "text-blue bg-white-600")
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-800 bg-white")
                 }
               >
                 Accounting
@@ -77,8 +77,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 4
-                    ? "text-blue-600 bg-blue-100"
-                    : "text-blue bg-white-600")
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-800 bg-white")
                 }
               >
                 After sales
@@ -95,8 +95,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 5
-                    ? "text-blue-600 bg-blue-100"
-                    : "text-blue bg-white-600")
+                      ? "bg-blue-700 text-white"
+                      : "text-blue-800 bg-white")
                 }
               >
                 Agency

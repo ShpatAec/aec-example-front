@@ -7,7 +7,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="relative flex flex-col justify-center  overflow-hidden ">
-      <div className="w-full card bg-white rounded-md shadow-xl lg:max-w-xl">
+      <div className="w-full card bg-white rounded-md shadow-xl">
         <h4 className="text-2xl mb-6  text-center text-blue-800  uppercase">
           PROFILE SETTINGS{" "}
         </h4>
