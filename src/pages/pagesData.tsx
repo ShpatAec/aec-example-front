@@ -6,7 +6,7 @@ import BoardAdmin from "./BoardAdmin";
 import BoardUser from "./BoardUser";
 import BoardModerator from "./BoardModerator";
 import AccountSettings from "./AccountSettings";
-
+import AutoportSettings from "./AutoportSettings";
 import React from "react";
 // @ts-ignore
 const pagesData: routerType[] = [
@@ -49,6 +49,11 @@ const pagesData: routerType[] = [
     path: "mod",
     element: <BoardModerator />,
     title: "mod",
+  },
+  {
+    path: "autoportSettings",
+    element: <AutoportSettings/>,
+    title: "autoportSettings"
   },
 ];
 
