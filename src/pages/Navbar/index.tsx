@@ -9,14 +9,18 @@ const Navbar: React.FC = () => {
     const [showModeratorBoard, setShowModeratorBoard] = useState<boolean>(false);
     const [showAdminBoard, setShowAdminBoard] = useState<boolean>(false);
     const [currentUser, setCurrentUser] = useState<IUser | undefined>(undefined);
+    const [darkModeEnabled, setDarkModeEnabled] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOptionClick = () => setIsOpen(false);
+    const toggleDropdownMenu = () => {setIsOpen(!isOpen);};
 
     useEffect(() => {
         const user = AuthService.getCurrentUser();
 
         if (user) {
             setCurrentUser(user);
-            setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
-            setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
+            setShowModeratorBoard(user.roles.includes("MODERATOR"));
+            setShowAdminBoard(user.roles.includes("ADMIN"));
         }
 
         EventBus.on("logout", logout);
@@ -34,65 +38,83 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav
-            className="bg-white sticky top-0 p-2 flex justify-evenly uppercase shadow-xl title-primary w-full grid grid-cols-2">
+            <nav
+                className={`bg-white sticky top-0 p-2 flex justify-evenly shadow-xl title-primary w-full grid grid-cols-2 ${darkModeEnabled ? 'dark' : ''}`}>
             <div
                 className="sm:hidden xs:hidden lg:flex xl:flex 2xl:flex float-left items-center lg:col-start-1 lg:col-end-2 xl:col-start-1 xl:col-end-2">
-                <Link to="/home" className="px-3 py-3 text-white ml-4">
+                <Link to="/home" className="text-white ml-4">
                     <img alt="AEC-logo" src="/assets/images/AEC_Logo.png"
                          className="sm:hidden xs:hidden lg:w-20 xl:w-24 2xl:w-24 lg:inline xl:inline 2xl:inline"/>
                 </Link>
             </div>
+            <button onClick={() => setDarkModeEnabled(!darkModeEnabled)}>Dark Mode</button>
             <div
                 className="lg:col-start-3 lg:col-end-3 xl:col-start-3 xl:col-end-3 2xl:col-start-3 2xl:col-end-3 lg:flex xl:flex 2xl:flex float-right items-center md:hidden sm:hidden xs:hidden">
                 {showModeratorBoard && (
                     <Link to={"/mod"}
-                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm mr-4 transition duration-500 ease-in-out">
                         Moderator Board
                     </Link>
                 )}
 
                 {showAdminBoard && (
                     <Link to={"/admin"}
-                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm mr-4 transition duration-500 ease-in-out">
                         Admin Board
-                    </Link>
-                )}
-
-                {currentUser && (
-                    <Link to={"/user"}
-                          className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                        User
                     </Link>
                 )}
 
                 {currentUser ? (
                     <>
                         <Link to="/home"
-                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm mr-4 transition duration-500 ease-in-out">
                             Home
                         </Link>
-                        <Link to={"/accountSettings"}
-                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
-                            {currentUser.email}
-                        </Link>
-
-                        <Link to={"/"}
-                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out"
-                              onClick={logout}>
-                            Logout
-                        </Link>
+                        <div className="relative">
+                            <button
+                                className="rounded-lg px-3 text-sm py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out flex items-center"
+                                onClick={toggleDropdownMenu}
+                            >
+                                {currentUser.email}
+                                <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {isOpen && (
+                                <div className="fixed top-15 right-10 z-50 bg-white rounded-lg shadow-md py-2 dark-bg">
+                                    <Link
+                                        to="/user"
+                                        className="block px-4 py-2 text-gray-800 text-sm hover:bg-blue-800 hover:text-white"
+                                        onClick={handleOptionClick}
+                                    >
+                                        User
+                                    </Link>
+                                    <Link
+                                        to="/accountSettings"
+                                        className="block px-4 py-2 text-gray-800 text-sm hover:bg-blue-800 hover:text-white"
+                                        onClick={handleOptionClick}
+                                    >
+                                        Account Settings
+                                    </Link>
+                                    <Link to={"/"}
+                                          className="block px-4 py-2 hover:bg-blue-800 text-sm hover:text-white "
+                                          onClick={() => { logout(); handleOptionClick(); }}>
+                                        Logout
+                                    </Link>
+                                </div>
+                            )}
+                        </div>
                     </>
                 ) : (
                     <div
-                        className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                        className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm mr-4 transition duration-500 ease-in-out">
                         <Link to={"/"}
-                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm  mr-4 transition duration-500 ease-in-out">
                             Login
                         </Link>
 
                         <Link to={"/register"}
-                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 font-medium mr-4 transition duration-500 ease-in-out">
+                              className="rounded-lg px-3 py-2 text-black hover:text-red-500 text-sm  mr-4 transition duration-500 ease-in-out">
                             Sign Up
                         </Link>
                     </div>
