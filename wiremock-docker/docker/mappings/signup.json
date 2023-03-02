@@ -1,11 +1,11 @@
 {
   "request":{
     "method":"POST",
-    "url":"/signup",
+    "url":"/register",
     "bodyPatterns":[
       {
         "equalToJson":{
-          "username":"${json-unit.any-string}",
+          "name":"${json-unit.any-string}",
           "password":"${json-unit.any-string}",
           "email":"${json-unit.any-string}"
         }

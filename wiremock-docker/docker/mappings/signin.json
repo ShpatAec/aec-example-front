@@ -1,7 +1,7 @@
 {
   "request": {
     "method": "POST",
-    "urlPath": "/signin",
+    "urlPath": "/login",
     "headers": {
       "Content-Type": {
         "equalTo": "application/json"
