@@ -42,6 +42,11 @@ nav.dark button{
   color:#fff;
 }
 
+nav.dark img {
+  -webkit-filter: hue-rotate(180deg) saturate(2) invert(1);
+  filter: hue-rotate(180deg) saturate(2) invert(1);
+}
+
 .posts-list {
   list-style: none;
   padding: 0;
