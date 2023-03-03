@@ -10,9 +10,8 @@ const HomeTabs = () => {
 
   const btnOnClick = () => getTableData();
   useEffect(() => {
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     getTableData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>
