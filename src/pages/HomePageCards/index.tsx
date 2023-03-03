@@ -1,15 +1,17 @@
 import { useGetPosts } from "../../lib/api-hooks";
 import { FetchState } from "../../types";
 import "../../App.css";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import HomeStyle from "../Home/home.module.css";
 import axios from "axios";
 
 function HomePageCards() {
   const [posts, fetchState, getPosts, setPosts] = useGetPosts();
-  const btnOnClick = () => getPosts();
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   const [postIdToDelete, setPostIdToDelete] = useState(0);
+  useEffect(() => {
+    getPosts();
+  }, []);
   const deletePost = () => {
     const headers = { foo: "bar" };
     axios
@@ -41,7 +43,6 @@ function HomePageCards() {
           </p>
           <button
             className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-none text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            onClick={btnOnClick}
           >
             Get Data
           </button>
@@ -53,7 +54,6 @@ function HomePageCards() {
           <p>Oops! Something went wrong. Please try again.</p>
           <button
             className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            onClick={btnOnClick}
           >
             Get Posts
           </button>
