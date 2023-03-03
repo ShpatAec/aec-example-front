@@ -23,7 +23,9 @@ body::-webkit-scrollbar-thumb {
   padding: 20px 15px;
 }
 
-
+.dark {
+  @apply bg-gray-800 text-white
+}
 
 nav.dark {
   background-color: #222;
@@ -43,8 +45,8 @@ nav.dark button{
 }
 
 nav.dark img {
-  -webkit-filter: hue-rotate(180deg) saturate(2) invert(1);
-  filter: hue-rotate(180deg) saturate(2) invert(1);
+  -webkit-filter: hue-rotate(180deg) invert(1);
+  filter: hue-rotate(180deg) invert(1);
 }
 
 .posts-list {
