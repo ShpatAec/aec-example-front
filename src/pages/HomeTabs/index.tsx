@@ -2,13 +2,11 @@ import React, { useEffect }  from "react";
 import HomePageCards from "../HomePageCards";
 import Table from "../Table";
 import {useGeTableData} from "../../lib/api-hooks";
-import {FetchState} from "../../types";
-import HomeStyle from "../Home/home.module.css";
 import MainTab from "../MainTab";
 // @ts-ignore
 const HomeTabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
-  const [tableData, fetchState, getTableData] = useGeTableData();
+  const [, , getTableData] = useGeTableData();
 
   const btnOnClick = () => getTableData();
   useEffect(() => {
