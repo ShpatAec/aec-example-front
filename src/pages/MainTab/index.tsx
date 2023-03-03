@@ -7,6 +7,8 @@ import {useGeTableData} from "../../lib/api-hooks";
 function HomePageCards() {
   const [tableData, fetchState, getTableData] = useGeTableData();
     useEffect(() => {
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         getTableData();
     }, []);
 
