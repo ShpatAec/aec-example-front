@@ -149,7 +149,6 @@ const Navbar = (props: any) => {
               </Link>
             </div>
           )}
-
           <img
             alt="toggleIcon"
             src={
@@ -264,6 +263,16 @@ const Navbar = (props: any) => {
               </svg>
             )}
           </button>
+          <img
+            alt="toggleIcon"
+            src={
+              props.darkMode
+                ? "/assets/images/toggle-dark.png"
+                : "/assets/images/toggle-light.png"
+            }
+            className="pb-3 pl-2 w-8 transition duration-500 ease-in-out inline"
+            onClick={props.toggleDarkMode}
+          ></img>
         </div>
       </nav>
     </>
