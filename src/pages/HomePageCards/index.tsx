@@ -11,6 +11,7 @@ function HomePageCards() {
   const [postIdToDelete, setPostIdToDelete] = useState(0);
   useEffect(() => {
     getPosts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const deletePost = () => {
     const headers = { foo: "bar" };

@@ -1,18 +1,10 @@
-import React, { useEffect }  from "react";
+import React  from "react";
 import HomePageCards from "../HomePageCards";
 import Table from "../Table";
-import {useGeTableData} from "../../lib/api-hooks";
 import MainTab from "../MainTab";
 // @ts-ignore
 const HomeTabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
-  const [, , getTableData] = useGeTableData();
-
-  const btnOnClick = () => getTableData();
-  useEffect(() => {
-    getTableData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
   return (
     <>
       <div className="container flex flex-wrap">
@@ -35,7 +27,6 @@ const HomeTabs = () => {
                       ? "bg-blue-700 text-white"
                       : "text-blue-800 bg-white")
                 }
-                onClick={btnOnClick}
               >
 
                 Main
