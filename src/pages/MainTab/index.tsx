@@ -8,7 +8,7 @@ function HomePageCards() {
   const [tableData, fetchState, getTableData] = useGeTableData();
     useEffect(() => {
         getTableData();
-    }, []);
+    }, [getTableData]);
 
   return (
       <div >

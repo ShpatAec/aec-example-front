@@ -11,7 +11,7 @@ function HomePageCards() {
   const [postIdToDelete, setPostIdToDelete] = useState(0);
   useEffect(() => {
     getPosts();
-  }, []);
+  }, [getPosts]);
   const deletePost = () => {
     const headers = { foo: "bar" };
     axios
