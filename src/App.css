@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 nav.dark {
-  background-color: #222;
+  background-color: rgb(17 24 39);
   color: #fff;
 }
 
@@ -106,4 +106,14 @@ nav{
 }
 .card{
   padding: 20px;
+}
+
+.truncateDescription {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
 }

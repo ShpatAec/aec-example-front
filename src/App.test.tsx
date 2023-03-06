@@ -35,7 +35,7 @@ describe('<Home />', () => {
 
         renderComponent();
 
-        const stateEl = screen.queryByText(loadingText);
+        const stateEl = screen.queryAllByText(loadingText);
 
         // eslint-disable-next-line testing-library/await-async-utils
         waitFor(() => expect(stateEl).toBeInTheDocument());
@@ -94,7 +94,8 @@ describe('<Home />', () => {
 
         renderComponent();
 
-        const btnEl = screen.queryByText('Get Data') as HTMLButtonElement;
+        const btnEl = screen.getAllByText('Get Data').find(el => el.tagName === 'BUTTON') as HTMLButtonElement;
+
 
         fireEvent.click(btnEl);
 

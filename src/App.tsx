@@ -10,7 +10,7 @@ const App = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   };
   return (
-    <div className={`h-full w-full mx-auto py-2 ${darkMode ? "dark" : ""}`}>
+    <div className={`h-screen w-full mx-auto ${darkMode ? "dark" : ""}`}>
       <BrowserRouter>
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Router />

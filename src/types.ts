@@ -12,6 +12,16 @@ export type PostData = {
   body: string;
 };
 
+export type TableData = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  rating: number;
+
+};
+
 export interface routerType {
   title: string;
   path: string;
