@@ -1,6 +1,7 @@
-import React from "react";
+import React  from "react";
 import HomePageCards from "../HomePageCards";
 import Table from "../Table";
+import MainTab from "../MainTab";
 // @ts-ignore
 const HomeTabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
@@ -27,6 +28,7 @@ const HomeTabs = () => {
                     : "text-blue-800 bg-white dark:text-white dark:bg-gray-800")
                 }
               >
+
                 Main
               </div>
             </button>
@@ -107,15 +109,7 @@ const HomeTabs = () => {
             <div className="px-4 py-5 flex-auto">
               <div className=" tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div
-                    className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3"
-                    role="alert"
-                  >
-                    <p className="font-bold">Informational message</p>
-                    <p className="text-sm">
-                      Some additional text to explain said message.
-                    </p>
-                  </div>
+               <MainTab/>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <HomePageCards />
