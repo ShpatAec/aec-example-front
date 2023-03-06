@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-
 import IUser from "../../types/user.types";
 import { register } from "../../services/auth.service";
 
@@ -68,8 +67,8 @@ const Register: React.FC = () => {
 
   return (
     <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
-      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
-        <h1 className="text-3xl font-semibold text-center text-blue-800  uppercase">
+      <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl dark:bg-gray-700">
+        <h1 className="text-3xl font-semibold text-center text-blue-800 dark:text-white uppercase">
           Sign up
         </h1>
         <Formik
@@ -83,14 +82,14 @@ const Register: React.FC = () => {
                 <div className="mb-2">
                   <label
                     htmlFor={"name"}
-                    className="block text-sm font-semibold text-gray-800"
+                    className="block text-sm font-semibold text-gray-800 dark:text-white"
                   >
                     Name
                   </label>
                   <Field
                     name="name"
                     type="text"
-                    className="block w-full px-4 py-2 mt-2 text-blue-800  bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                    className="block w-full px-4 py-2 mt-2 text-blue-800 bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                   <ErrorMessage
                     name="name"
@@ -101,7 +100,7 @@ const Register: React.FC = () => {
                 <div className="mb-4">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-800"
+                    className="block text-sm font-semibold text-gray-800 dark:text-white"
                   >
                     Email
                   </label>
@@ -119,7 +118,7 @@ const Register: React.FC = () => {
                 <div className="mb-4">
                   <label
                     htmlFor="password"
-                    className="block text-sm font-semibold text-gray-800"
+                    className="block text-sm font-semibold text-gray-800 dark:text-white"
                   >
                     Password
                   </label>

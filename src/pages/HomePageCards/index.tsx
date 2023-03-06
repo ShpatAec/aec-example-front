@@ -54,7 +54,7 @@ function HomePageCards() {
             <>
               <p>Oops! Something went wrong. Please try again.</p>
               <button
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white dark:bg-gray-800 dark:text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
               >
                 Get Posts
               </button>
@@ -77,7 +77,7 @@ function HomePageCards() {
                       <div className="d flex">
                         <a
                             href="/#"
-                            className="w-30 inline-flex dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white items-center px-3 py-2 font-medium text-xs text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                            className="w-30 inline-flex dark:bg-gray-800 dark:text-white dark:hover:text-black dark:hover:bg-white items-center px-3 py-2 font-medium text-xs text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
                         >
                           Read more
                           <svg
