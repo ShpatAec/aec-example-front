@@ -1,12 +1,13 @@
 import React from "react";
 import HomePageCards from "../HomePageCards";
 import Table from "../Table";
+import MainTab from "../MainTab";
 // @ts-ignore
 const HomeTabs = () => {
   const [openTab, setOpenTab] = React.useState(1);
   return (
     <>
-      <div className="container dark:bg-gray-800 flex flex-wrap">
+      <div className="container flex flex-wrap">
         <div className="w-full">
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
@@ -23,8 +24,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 1
-                    ? "bg-blue-700 text-white dark:bg-blue-800"
-                    : "text-blue-800 bg-white dark:text-white dark:bg-gray-800")
+                    ? "bg-blue-700 text-white"
+                    : "text-blue-800 bg-white")
                 }
               >
                 Main
@@ -41,8 +42,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 2
-                    ? "bg-blue-700 text-white dark:bg-blue-800"
-                    : "text-blue-800 bg-white dark:text-white dark:bg-gray-800")
+                    ? "bg-blue-700 text-white"
+                    : "text-blue-800 bg-white")
                 }
               >
                 Sales
@@ -59,8 +60,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 3
-                    ? "bg-blue-700 text-white dark:bg-blue-800"
-                    : "text-blue-800 bg-white dark:bg-gray-800 dark:text-white")
+                    ? "bg-blue-700 text-white"
+                    : "text-blue-800 bg-white")
                 }
               >
                 Accounting
@@ -77,8 +78,8 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 4
-                    ? "bg-blue-700 text-white dark:bg-blue-800"
-                    : "text-blue-800 bg-white dark:bg-gray-800 dark:text-white")
+                    ? "bg-blue-700 text-white"
+                    : "text-blue-800 bg-white")
                 }
               >
                 After sales
@@ -95,27 +96,19 @@ const HomeTabs = () => {
                 className={
                   "text-xs font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 5
-                    ? "bg-blue-700 text-white dark:bg-blue-800"
-                    : "text-blue-800 bg-white dark:bg-gray-800 dark:text-white")
+                    ? "bg-blue-700 text-white"
+                    : "text-blue-800 bg-white")
                 }
               >
                 Agency
               </div>
             </button>
           </ul>
-          <div className=" relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded dark:bg-gray-800">
+          <div className=" relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className=" tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <div
-                    className="bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3"
-                    role="alert"
-                  >
-                    <p className="font-bold">Informational message</p>
-                    <p className="text-sm">
-                      Some additional text to explain said message.
-                    </p>
-                  </div>
+                  <MainTab />
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <HomePageCards />
@@ -128,19 +121,16 @@ const HomeTabs = () => {
                     Completely synergize resource taxing relationships via
                     premier niche markets. Professionally cultivate one-to-one
                     customer service with robust ideas.
-                    <br />
-                    <br />
-                    Dynamically innovate resource-leveling customer service for
-                    state of the art customer service.
+                    <br /> <br /> Dynamically innovate resource-leveling
+                    customer service for state of the art customer service.
                   </p>
                 </div>
                 <div className={openTab === 5 ? "block" : "hidden"} id="link5">
                   <p>
                     Professionally cultivate one-to-one customer service with
                     robust ideas.
-                    <br />
-                    <br /> Dramatically maintain clicks-and-mortar solutions
-                    without functional solutions.
+                    <br /> <br /> Dramatically maintain clicks-and-mortar
+                    solutions without functional solutions.
                   </p>
                 </div>
               </div>
@@ -151,11 +141,10 @@ const HomeTabs = () => {
     </>
   );
 };
-
 export default function TabsRender() {
   return (
     <>
-      <HomeTabs />
+      <HomeTabs />;
     </>
   );
 }
