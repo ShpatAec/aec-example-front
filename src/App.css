@@ -7,11 +7,11 @@
   src: url("../public/assets/fonts/Montserrat-Bold.ttf");
 }
 
-body::-webkit-scrollbar {
+.main-div::-webkit-scrollbar {
   width: 5px;
 }
 
-body::-webkit-scrollbar-thumb {
+.main-div::-webkit-scrollbar-thumb {
   background-color: blue;
   border-radius: 999px;
 }
