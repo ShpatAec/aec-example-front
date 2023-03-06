@@ -75,7 +75,7 @@ const Profile: React.FC = () => {
               <button className="mr-3 bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white dark:bg-gray-300 dark:text-black dark:hover:text-white dark:hover:bg-black py-2 px-4 border border-blue-500 dark:border-black hover:border-transparent rounded">
                 Cancel
               </button>
-              <button className=" px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-800 rounded-md hover:bg-blue-600 dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white focus:outline-none focus:bg-blue-600">
+              <button className="px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-blue-800 rounded-md hover:bg-blue-600 dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white focus:outline-none focus:bg-blue-600">
                 Update profile
               </button>
             </div>

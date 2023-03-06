@@ -61,11 +61,11 @@ function HomePageCards() {
       )}
       {fetchState === FetchState.SUCCESS && (
         <>
-          <div className="grid grid-flow-row gap-4 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10">
+          <div className="grid grid-flow-row gap-4 text-neutral-600 dark:text-white sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-10">
             {posts.map((post) => (
               <div
                 key={post.id}
-                className="rounded-lg shadow-lg bg-white p-5 mb-2 bg-white border border-r border-b border-l border-gray-200 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4"
+                className="rounded-lg shadow-lg bg-white dark:bg-gray-700 p-5 mb-2 bg-white border border-r border-b border-l border-gray-200 dark:border-black bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4"
               >
                 <a href="/#">
                   <h5 className="mb-2 truncate text-2xl font-bold tracking-tight text-gray-900 ">
@@ -76,7 +76,7 @@ function HomePageCards() {
                 <div className="d flex">
                   <a
                     href="/#"
-                    className="w-30 inline-flex items-center px-3 py-2 font-medium text-xs text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="w-30 inline-flex dark:bg-black dark:text-white dark:hover:text-black dark:hover:bg-white items-center px-3 py-2 font-medium text-xs text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
                     Read more
                     <svg
