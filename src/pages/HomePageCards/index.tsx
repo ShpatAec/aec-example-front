@@ -95,7 +95,7 @@ function HomePageCards() {
                   </a>
                   <button
                     onClick={() => handleDeleteButtonClick(post.id)}
-                    className="ml-3 items-center flex text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                    className="ml-3 items-center flex text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-1.5 text-center dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
                   >
                     Delete
                   </button>
@@ -104,8 +104,8 @@ function HomePageCards() {
             ))}
           </div>
           {showDeleteModal && (
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-10">
-              <div className="bg-white p-5 rounded-lg shadow-xl">
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 dark:bg-black dark:bg-opacity-75 flex items-center justify-center z-10">
+              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-xl">
                 <h2 className="text-lg font-medium mb-4">
                   Are you sure you want to delete this post?
                 </h2>
