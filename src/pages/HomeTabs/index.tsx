@@ -1,6 +1,6 @@
 import React  from "react";
 import HomePageCards from "../HomePageCards";
-import Table from "../Table";
+import TableComponent from "../Table";
 import MainTab from "../MainTab";
 // @ts-ignore
 const HomeTabs = () => {
@@ -116,7 +116,7 @@ const HomeTabs = () => {
                     <HomePageCards />
                   </div>
                   <div className={openTab === 3 ? "block" : "hidden"} id="link3">
-                    <Table />
+                    <TableComponent />
                   </div>
                   <div className={openTab === 4 ? "block" : "hidden"} id="link4">
                     <p>
