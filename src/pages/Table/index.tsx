@@ -59,7 +59,7 @@ export default function TableComponent() {
       page > 0 ? Math.max(0, (1 + page) * rowsPerPage - tableData.length) : 0;
 
   return (
-      <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <div className="relative overflow-x-auto shadow-md sm:rounded-lg dark:text-gray-300">
         {fetchState === FetchState.LOADING && <p>Fetching posts...</p>}
         {fetchState === FetchState.ERROR && (
             <>
@@ -107,7 +107,7 @@ export default function TableComponent() {
         </button>
         </div>
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 700 }} aria-label="customized table">
+          <Table sx={{ minWidth: 700 }} className="dark:bg-gray-600" aria-label="customized table">
             <TableHead>
               <TableRow>
                 <StyledTableCell>Product name</StyledTableCell>
@@ -122,12 +122,12 @@ export default function TableComponent() {
                   .map((row, index) => {
                     return (
                             <StyledTableRow key={index}>
-                              <StyledTableCell component="th" scope="row">
+                              <StyledTableCell component="th" scope="row" className="dark:text-gray-300">
                                 {row.title}
                               </StyledTableCell>
-                              <StyledTableCell align="right">{row.description}</StyledTableCell>
-                              <StyledTableCell align="right">{row.category}</StyledTableCell>
-                              <StyledTableCell align="right">{row.price}</StyledTableCell>
+                              <StyledTableCell align="right" className="dark:text-gray-300">{row.description}</StyledTableCell>
+                              <StyledTableCell align="right" className="dark:text-gray-300">{row.category}</StyledTableCell>
+                              <StyledTableCell align="right" className="dark:text-gray-300">{row.price}</StyledTableCell>
                             </StyledTableRow>
                     );
                   })
@@ -145,6 +145,7 @@ export default function TableComponent() {
           </Table>
         </TableContainer>
         <TablePagination
+            className="dark:text-gray-300"
             rowsPerPageOptions={[5, 10, 25]}
             component="div"
             count={tableData.length}
