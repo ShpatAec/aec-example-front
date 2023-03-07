@@ -1,20 +1,22 @@
-import axios from "axios";
-import authHeader from "./auth-header";
-
-const API_URL = "/";
+const data = {
+  all: "Public content",
+  user: "User content full",
+  mod: "Moderator content",
+  admin: "Admin content"
+};
 
 export const getPublicContent = () => {
-  return axios.get(API_URL + "all");
+  return Promise.resolve({ data: data.all });
 };
 
 export const getUserBoard = () => {
-  return axios.get(API_URL + "user", { headers: authHeader() });
+  return Promise.resolve({ data: data.user });
 };
 
 export const getModeratorBoard = () => {
-  return axios.get(API_URL + "mod", { headers: authHeader() });
+  return Promise.resolve({ data: data.mod });
 };
 
 export const getAdminBoard = () => {
-  return axios.get(API_URL + "admin", { headers: authHeader() });
+  return Promise.resolve({ data: data.admin });
 };
