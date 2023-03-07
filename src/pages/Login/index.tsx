@@ -74,12 +74,12 @@ const Login: React.FC<Props> = () => {
                 <Field
                   name="email"
                   type="text"
-                  className="block w-full px-4 py-2 mt-2 text-blue-800  bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 dark:text-white"
+                  className="block w-full px-4 py-2 mt-2 text-blue-800  bg-white border rounded-md focus:border-blue-400  focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 dark:text-gray-800"
                 />
                 <ErrorMessage
                   name="email"
                   component="div"
-                  className="text-red-500 text-sm font-medium mt-1 dark:text-white"
+                  className="text-red-500 text-sm font-medium mt-1"
                 />
               </div>
 
